@@ -2,7 +2,7 @@
   <footer class="footer py-3">
     <div class="container">
       <p class="small mb-0 text-light">
-        &copy; Created With <i class="ti-heart text-danger"></i> By <a href="http://devcrud.com" target="_blank"><span class="text-danger" title="Bootstrap 4 Themes and Dashboards">DevCRUD</span></a>
+        &copy; Created With Using By <i class="ti-heart text-danger"></i> Vue Js And Laravel Api
       </p>
     </div>
   </footer>

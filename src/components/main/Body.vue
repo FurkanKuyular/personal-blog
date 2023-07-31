@@ -1,6 +1,6 @@
 <template>
   <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-  <a href="components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i class="ti-shift-left-alt"></i> Components</a>
+<!--  <a href="components.html" class="btn btn-primary btn-component" data-spy="affix" data-offset-top="600"><i class="ti-shift-left-alt"></i> Components</a>-->
   <Header />
   <Navbar />
   <About />

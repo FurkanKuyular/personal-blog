@@ -22,40 +22,9 @@
             </form>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="contact-info-card">
-            <h4 class="contact-title">Get in touch</h4>
-            <div class="row mb-2">
-              <div class="col-1 pt-1 mr-1">
-                <i class="ti-mobile icon-md"></i>
-              </div>
-              <div class="col-10 ">
-                <h6 class="d-inline">Phone : <br> <span class="text-muted">+ (123) 456-789</span></h6>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col-1 pt-1 mr-1">
-                <i class="ti-map-alt icon-md"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="d-inline">Address :<br> <span class="text-muted">12345 Fake ST NoWhere AB Country.</span></h6>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col-1 pt-1 mr-1">
-                <i class="ti-envelope icon-md"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="d-inline">Email :<br> <span class="text-muted">info@website.com</span></h6>
-              </div>
-            </div>
-            <ul class="social-icons pt-4">
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
-            </ul>
+        <div class="col-lg-4 pt-5">
+          <div class="contact-info-card pt-5">
+            <GoogleMap />
           </div>
         </div>
       </div>
@@ -65,7 +34,10 @@
 </template>
 
 <script>
+import GoogleMap from "@/components/google/GoogleMap.vue";
+
 export default {
   name: 'Contact',
+  components: {GoogleMap},
 }
 </script>
