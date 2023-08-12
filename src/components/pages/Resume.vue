@@ -3,7 +3,7 @@
     <div class="container">
       <h2 class="mb-5"><span class="text-danger">My</span> Resume</h2>
       <div class="row">
-        <div class="col-md-6 col-lg-4">
+        <div class="col-md-8 col-lg-8">
           <div class="card">
             <div class="card-header">
               <div class="mt-2">
@@ -12,41 +12,13 @@
               </div>
             </div>
             <div class="card-body">
-              <h6 class="title text-danger">2017 - Present</h6>
-              <P>UX Developer</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-              <hr>
-              <h6 class="title text-danger">2016 - 2017</h6>
-              <P>Front-end Developer</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-              <hr>
-              <h6 class="title text-danger">2015 - 2016</h6>
-              <P>UX Designer</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-          <div class="card">
-            <div class="card-header">
-              <div class="mt-2">
-                <h4>Education</h4>
-                <span class="line"></span>
+              <div v-for="item in this.expertiseData.data">
+                <div v-if="item.end_date"><h6 class="title text-danger">{{ item.start_date }} - {{ item.end_date }}</h6></div>
+                <div v-else><h6 class="title text-danger">{{ item.start_date }} - Present</h6></div>
+                <P>{{ item.title }}</P>
+                <P class="subtitle">{{ item.description }}</P>
+                <hr>
               </div>
-            </div>
-            <div class="card-body">
-              <h6 class="title text-danger">2017 - Present</h6>
-              <P>B.E Computer Engineering</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error corrupti recusandae obcaecati odit repellat ducimus cum, minus tempora aperiam at.</P>
-              <hr>
-              <h6 class="title text-danger">2016 - 2017</h6>
-              <P>Diploma in Computer Engineering</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, id officiis quas placeat quia voluptas dolorum rem animi nostrum quae.aliquid repudiandae saepe!.</P>
-              <hr>
-              <h6 class="title text-danger">2015 - 2016</h6>
-              <P>High School Degree</P>
-              <P class="subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum recusandae, cupiditate ullam dolor ratione repellendus.aliquid repudiandae saepe!.</P>
-
             </div>
           </div>
         </div>
@@ -59,51 +31,11 @@
               </div>
             </div>
             <div class="card-body pb-2">
-              <h6>hTL5 &amp; CSS3</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 97%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>JavaScript</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>PHP</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>SQL</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>Laborum</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>Tempora</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 90%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <div class="pull-left">
-                <h4 class="mt-2">Languages</h4>
-                <span class="line"></span>
-              </div>
-            </div>
-            <div class="card-body pb-2">
-              <h6>English</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>French</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 45%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-              <h6>Spanish</h6>
-              <div class="progress mb-3">
-                <div class="progress-bar bg-danger" role="progressbar" style="width: 67%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+              <div v-for="item in this.skillsData.data">
+                <h6>{{ item.name }}</h6>
+                <div class="progress mb-3">
+                  <div class="progress-bar bg-danger" role="progressbar" :style="{width: item.rate * 10 + '%'}" aria-valuenow="7" aria-valuemin="0" aria-valuemax="10"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -114,7 +46,38 @@
 </template>
 
 <script>
-export default {
+import {defineComponent, reactive} from "vue";
+import SkillDataService from "../../services/SkillDataService";
+import ExpertiseDataService from "@/services/ExpertiseDataService";
+
+export default defineComponent({
   name: 'Resume',
-}
+  data() {
+    return {
+      skillsData: reactive({}),
+      expertiseData: reactive({}),
+    };
+  },
+  methods: {
+    skills() {
+      SkillDataService.getAll().then((response) => {
+        this.skillsData = response.data;
+
+        return response.data;
+      });
+    },
+    expertises() {
+      ExpertiseDataService.getAll().then((response) => {
+        this.expertiseData = response.data;
+
+        return response.data;
+      });
+    }
+  },
+  mounted() {
+    this.skills();
+    this.expertises();
+  }
+});
+
 </script>
