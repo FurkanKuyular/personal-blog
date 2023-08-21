@@ -70,7 +70,10 @@
 </template>
 
 <script>
+import PostPusher from "@/components/pusher/PostPusher.vue";
+
 export default {
   name: 'Blog',
+  components: {PostPusher},
 }
 </script>
