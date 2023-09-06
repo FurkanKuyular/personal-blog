@@ -66,6 +66,12 @@ export default {
                 title: 'Message could not send!',
                 message: err.response.data.error.message,
               })
+            } else {
+              this.$toast.open({
+                type: 'error',
+                title: 'Message could not send!',
+                message: err.response.data.message,
+              })
             }
           });
     }
