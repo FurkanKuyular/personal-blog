@@ -6,7 +6,9 @@
         <span class="line mb-5"></span>
         <h5 class="mb-3">A Backend Developer Located Turkey</h5>
         <p class="mt-20"> I am a graduate of Pamukkale University Computer Programming Department, I have 5 years of experience in the software industry. I started my career with the Salesforce CRM application. I am currently working as a PHP developer. I have experience with Symfony and Laravel. I have taken part in important projects by adapting to the teams I have been in until now. I pay a lot of attention to writing clean code and the architecture on the code.</p>
-        <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
+        <a href="../../../public/cv/CV%20Ahmet%20Furkan%20Kuyular.pdf" download="">
+          <button class="btn btn-outline-danger"><i class="icon-down-circled2"></i>Download My CV</button>
+        </a>
       </div>
       <div class="col-lg-4 about-card">
         <h3 class="font-weight-light">Personal Info</h3>

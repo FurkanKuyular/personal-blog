@@ -8,7 +8,6 @@
       <div class="header-content">
         <h4 class="header-subtitle">Hello, I am Furkan</h4>
         <h6 class="header-mono" >PHP Backend Developer | Learning Vue Js</h6>
-        <button class="btn btn-primary btn-rounded"><i class="ti-printer pr-2"></i>Print Resume</button>
       </div>
     </div>
   </header>
