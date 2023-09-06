@@ -6,56 +6,25 @@
         <div class="col-lg-8">
           <div class="contact-form-card">
             <h4 class="contact-title">Send a message</h4>
-            <form action="">
+            <form action="" @submit.prevent="sendMessage()">
               <div class="form-group">
-                <input  class="form-control" type="text" placeholder="Name *" required>
+                <input v-model="form.name" class="form-control" name="name" type="text" placeholder="Name *" required>
               </div>
               <div class="form-group">
-                <input class="form-control" type="email" placeholder="Email *" required>
+                <input v-model="form.email" class="form-control" name="email" type="email" placeholder="Email *" required>
               </div>
               <div class="form-group">
-                <textarea class="form-control" id="" placeholder="Message *" rows="7" required></textarea>
+                <textarea v-model="form.message" class="form-control" name="message" id="" placeholder="Message *" rows="7" required></textarea>
               </div>
               <div class="form-group ">
-                <button type="submit" class="form-control btn btn-primary" >Send Message</button>
+                <button type="submit" class="form-control btn btn-primary">Send Message</button>
               </div>
             </form>
           </div>
         </div>
-        <div class="col-lg-4">
-          <div class="contact-info-card">
-            <h4 class="contact-title">Get in touch</h4>
-            <div class="row mb-2">
-              <div class="col-1 pt-1 mr-1">
-                <i class="ti-mobile icon-md"></i>
-              </div>
-              <div class="col-10 ">
-                <h6 class="d-inline">Phone : <br> <span class="text-muted">+ (123) 456-789</span></h6>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col-1 pt-1 mr-1">
-                <i class="ti-map-alt icon-md"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="d-inline">Address :<br> <span class="text-muted">12345 Fake ST NoWhere AB Country.</span></h6>
-              </div>
-            </div>
-            <div class="row mb-2">
-              <div class="col-1 pt-1 mr-1">
-                <i class="ti-envelope icon-md"></i>
-              </div>
-              <div class="col-10">
-                <h6 class="d-inline">Email :<br> <span class="text-muted">info@website.com</span></h6>
-              </div>
-            </div>
-            <ul class="social-icons pt-4">
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-              <li class="social-item"><a class="social-link text-dark" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
-            </ul>
+        <div class="col-lg-4 pt-5">
+          <div class="contact-info-card pt-5">
+            <GoogleMap />
           </div>
         </div>
       </div>
@@ -64,8 +33,49 @@
   </div>
 </template>
 
+
 <script>
+import GoogleMap from "@/components/google/GoogleMap.vue";
+import ContactDataService from "@/services/ContactDataService";
+
 export default {
   name: 'Contact',
+  data() {
+    return {
+      form: {
+        name: null,
+        email: null,
+        message: null,
+      },
+    }
+  },
+  methods: {
+    sendMessage() {
+      ContactDataService.sendMessage(this.form)
+          .then(resp => {
+            this.$toast.open({
+              type: 'success',
+              title: 'Message sent!',
+              message: resp.data.message,
+            })
+          })
+          .catch(err => {
+            if (err.response.status === 429) {
+              this.$toast.open({
+                type: 'error',
+                title: 'Message could not send!',
+                message: err.response.data.error.message,
+              })
+            } else {
+              this.$toast.open({
+                type: 'error',
+                title: 'Message could not send!',
+                message: err.response.data.message,
+              })
+            }
+          });
+    }
+  },
+  components: {GoogleMap},
 }
 </script>

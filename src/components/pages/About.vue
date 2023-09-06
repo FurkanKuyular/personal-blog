@@ -4,52 +4,50 @@
       <div class="col-lg-4 about-card">
         <h3 class="font-weight-light">Who am I ?</h3>
         <span class="line mb-5"></span>
-        <h5 class="mb-3">A Web Designer / Developer Located In Our Lovely Earth</h5>
-        <p class="mt-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.sit amet, Qui deserunt consequatur fugit repellendusillo voluptas?</p>
-        <button class="btn btn-outline-danger"><i class="icon-down-circled2 "></i>Download My CV</button>
+        <h5 class="mb-3">A Backend Developer Located Turkey</h5>
+        <p class="mt-20"> I am a graduate of Pamukkale University Computer Programming Department, I have 5 years of experience in the software industry. I started my career with the Salesforce CRM application. I am currently working as a PHP developer. I have experience with Symfony and Laravel. I have taken part in important projects by adapting to the teams I have been in until now. I pay a lot of attention to writing clean code and the architecture on the code.</p>
+        <a href="../../../public/cv/CV%20Ahmet%20Furkan%20Kuyular.pdf" download="">
+          <button class="btn btn-outline-danger"><i class="icon-down-circled2"></i>Download My CV</button>
+        </a>
       </div>
       <div class="col-lg-4 about-card">
         <h3 class="font-weight-light">Personal Info</h3>
         <span class="line mb-5"></span>
         <ul class="mt40 info list-unstyled">
-          <li><span>Birthdate</span> : 09/13/1996</li>
-          <li><span>Email</span> : info@website.com</li>
-          <li><span>Phone</span> : + (123) 456-7890</li>
-          <li><span>Skype</span> : John_Doe </li>
-          <li><span>Address</span> :  12345 Fake ST NoWhere AB Country.</li>
-        </ul>
-        <ul class="social-icons pt-3">
-          <li class="social-item"><a class="social-link" href="#"><i class="ti-facebook" aria-hidden="true"></i></a></li>
-          <li class="social-item"><a class="social-link" href="#"><i class="ti-twitter" aria-hidden="true"></i></a></li>
-          <li class="social-item"><a class="social-link" href="#"><i class="ti-google" aria-hidden="true"></i></a></li>
-          <li class="social-item"><a class="social-link" href="#"><i class="ti-instagram" aria-hidden="true"></i></a></li>
-          <li class="social-item"><a class="social-link" href="#"><i class="ti-github" aria-hidden="true"></i></a></li>
+          <li class="pt-5"><span>Birthdate</span> : 06/21/1997</li>
+          <li class="pt-2"><span>Email</span> : furkankuyular@yahoo.com</li>
+          <li class="pt-2"><span>Phone</span> : + (90) 555 035 8124</li>
+          <li class="pt-2"><span>Address</span> :  Istanbul/Turkey </li>
         </ul>
       </div>
       <div class="col-lg-4 about-card">
-        <h3 class="font-weight-light">My Expertise</h3>
+        <h3 class="font-weight-light">My Communication Skills</h3>
         <span class="line mb-5"></span>
-        <div class="row">
-          <div class="col-1 text-danger pt-1"><i class="ti-widget icon-lg"></i></div>
+        <div class="row pt-5">
+          <div class="col-1 text-danger pt-1"><i class="ti-hand-point-up icon-lg"></i></div>
           <div class="col-10 ml-auto mr-3">
-            <h6>UX Design</h6>
-            <p class="subtitle"> exercitat Repellendus,  corrupt.</p>
+            <h6>Compatible</h6>
             <hr>
           </div>
         </div>
         <div class="row">
-          <div class="col-1 text-danger pt-1"><i class="ti-paint-bucket icon-lg"></i></div>
+          <div class="col-1 text-danger pt-1"><i class="ti-hand-point-right icon-lg"></i></div>
           <div class="col-10 ml-auto mr-3">
-            <h6>Web Development</h6>
-            <p class="subtitle">Lorem ipsum dolor sit consectetur.</p>
+            <h6>Listening</h6>
             <hr>
           </div>
         </div>
         <div class="row">
-          <div class="col-1 text-danger pt-1"><i class="ti-stats-up icon-lg"></i></div>
+          <div class="col-1 text-danger pt-1"><i class="ti-hand-point-down icon-lg"></i></div>
           <div class="col-10 ml-auto mr-3">
-            <h6>Digital Marketing</h6>
-            <p class="subtitle">voluptate commodi illo voluptatib.</p>
+            <h6>Arguing for the best</h6>
+            <hr>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1 text-danger pt-1"><i class="ti-hand-point-left icon-lg"></i></div>
+          <div class="col-10 ml-auto mr-3">
+            <h6>Reviewer</h6>
             <hr>
           </div>
         </div>
