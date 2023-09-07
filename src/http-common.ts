@@ -4,7 +4,7 @@ let xIp = '';
 
 // @ts-ignore
 const response = await axios
-    .get('https://api.ipify.org?format=json')
+    .get('http://api.ipify.org?format=json')
     .then(response => {
         xIp = response.data.ip;
     });
