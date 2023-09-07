@@ -44,6 +44,7 @@ export default {
     this.eventListener = window.LaravelEcho.channel('post-created-channel')
         .listen('.PostCreated', (data) => {
           this.postsData.data.unshift(data.post);
+          this.postsData.data.pop()
         });
   },
   beforeDestroy() {
