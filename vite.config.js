@@ -21,5 +21,8 @@ export default defineConfig({
   },
   optimizeDeps: {
     exclude: ['js-big-decimal']
+  },
+  build: {
+    target: 'esnext' //browsers can handle the latest ES features
   }
 })
