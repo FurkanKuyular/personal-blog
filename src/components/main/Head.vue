@@ -6,9 +6,9 @@
     <meta name="author" content="Devcrud">
     <title>Furkan Kuyular</title>
     <!-- font icons -->
-    <link rel="stylesheet" href="../../../public/frontend/assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../../../frontend/assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + JohnDoe main styles -->
-    <link rel="stylesheet" href="../../../public/frontend/assets/css/johndoe.css">
+    <link rel="stylesheet" href="../../../frontend/assets/css/johndoe.css">
   </head>
 </template>
 
