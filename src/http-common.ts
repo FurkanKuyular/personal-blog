@@ -3,14 +3,20 @@ import axios, { AxiosInstance } from "axios";
 let xIp = '';
 
 // @ts-ignore
+let xIpUrl = import.meta.env.VITE_APP_XIP_URL;
+
+// @ts-ignore
 const response = await axios
-    .get('https://api.ipify.org?format=json')
+    .get(xIpUrl)
     .then(response => {
         xIp = response.data.ip;
     });
 
+    // @ts-ignore
+    let apiUrl = import.meta.env.VITE_APP_API_URL;
+
 const apiClient: AxiosInstance = axios.create({
-    baseURL: 'http://0.0.0.0/api',
+    baseURL: apiUrl,
     headers: {
         "Content-type": "application/json",
         "X-IP": xIp,
