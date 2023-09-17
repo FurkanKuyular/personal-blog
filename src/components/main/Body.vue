@@ -21,14 +21,13 @@ import Header from "@/components/parts/Header.vue";
 import Navbar from "@/components/parts/Navbar.vue";
 import About from "@/components/pages/About.vue";
 import Resume from "@/components/pages/Resume.vue";
-import Portfolio from "@/components/pages/Porfolio.vue";
 import Blog from "@/components/pages/Blog.vue";
 import Contact from "@/components/pages/Contact.vue";
 import Reference from "@/components/pages/Reference.vue";
 
 export default {
   name: 'Body',
-  components: {Reference, Contact, Blog, Portfolio, Resume, About, Navbar, Header},
+  components: {Reference, Contact, Blog, Resume, About, Navbar, Header},
 }
 </script>
 
