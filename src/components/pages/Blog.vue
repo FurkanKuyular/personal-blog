@@ -5,7 +5,9 @@
       <div class="row">
         <div v-for="item in this.postsData.data" class="blog-card container-fluid" style="padding: 0;">
             <div class="img-holder text-left">
-              <picture v-html="item.post_image_html"></picture>
+              <picture>
+                <img v-bind:src="item.post_image_url" alt>
+              </picture>
             </div>
 
             <div class="content-holder">
@@ -35,7 +37,6 @@ export default {
     posts() {
       PostDataService.getAll().then(response => {
         this.postsData = response.data;
-
         return response.data;
       })
     }
